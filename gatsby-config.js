@@ -1,6 +1,11 @@
 const config = require('./data/siteConfig');
 
 module.exports = {
+  siteMetadata: {
+    title: config.siteTitle,
+    siteUrl: config.siteUrl,
+    description: config.siteDescription
+  },
   pathPrefix: config.pathPrefix,
   plugins: [
     'gatsby-plugin-styled-components',

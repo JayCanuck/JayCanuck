@@ -10,6 +10,7 @@ const work = process.env.RESUME_WORK;
 module.exports = {
   siteTitle: `Hi! I'm ${basics?.name?.split(/\s+/)?.[0]}!`,
   siteDescription: `Resume spotlight website for ${basics?.name}.  Software engineer specializing in web-based systems.`,
+  siteUrl: 'https://jrobitaille.dev',
   keywords: ['recume', 'cv', 'portfolio', 'software engineer', 'react', 'webapp', 'html', 'css', 'js', 'typescript'],
   authorName: basics?.name,
   twitterUsername: twitter?.username?.toLowerCase(),
@@ -66,7 +67,6 @@ module.exports = {
     github: github?.url,
     email: basics?.email
   },
-  siteUrl: 'https://jrobitaille.dev',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover',
   googleAnalyticsId: undefined, // was 'UA-000000000-1'
