@@ -1,0 +1,43 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+    - name: Building JSONResume PDF
+      run: npm run resume
+      env:
+        JSONRESUME: ${{ secrets.JSONRESUME }}
+    - name: Building Gatsby portfolio website
+      run: |
+        rm -fr ./.cache
+        rm -fr ./node_modules/.cache
+        npm run build
+      env:
+        JSONRESUME: ${{ secrets.JSONRESUME }}
+
+    - name: Deploying website
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        cname: jrobitaille.dev
+        publish_dir: ./public
+        publish_branch: public
