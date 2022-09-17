@@ -5,7 +5,14 @@ name: lint
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - '**.js'
+      - '**.jsx'
+      - '**.ts'
+      - '**.tsx'
+      - '**.json'
+    branches-ignore:
+      - 'public'
   pull_request:
   workflow_dispatch:
 
