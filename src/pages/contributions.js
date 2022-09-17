@@ -67,4 +67,4 @@ const StyledContributions = styled(Contributions)`
 `;
 
 export default StyledContributions;
-export const Head = () => <SEO title="Projects I've Worked On" keywords={siteConfig.keywords} />;
+export const Head = () => <SEO title="Projects I've Worked On" />;

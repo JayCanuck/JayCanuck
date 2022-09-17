@@ -127,4 +127,4 @@ const StyledHome = styled(Home)`
 `;
 
 export default StyledHome;
-export const Head = () => <SEO title={siteConfig.siteTitle} keywords={siteConfig.keywords} />;
+export const Head = () => <SEO title={siteConfig.siteTitle} />;

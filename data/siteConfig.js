@@ -9,7 +9,7 @@ const work = process.env.RESUME_WORK;
 // General site configurations
 module.exports = {
   siteTitle: `Hi! I'm ${basics?.name?.split(/\s+/)?.[0]}!`,
-  siteDescription: `Resume spotlight website for ${basics?.name}.  Software engineer specializing in web-based systems.`,
+  siteDescription: 'Software engineer specializing in web-based systems.',
   siteUrl: 'https://jrobitaille.dev',
   keywords: ['recume', 'cv', 'portfolio', 'software engineer', 'react', 'webapp', 'html', 'css', 'js', 'typescript'],
   authorName: basics?.name,
