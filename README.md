@@ -6,8 +6,8 @@ I'm Jason Robitaille!
 - *Currently:* Staff Software Engineer at LG Electronics working on [emerging technologies](https://github.com/lgsvl)
 - *Previously:* Software Engineer at LG Electronics working on the webOS app frameworks [Enyo](https://github.com/enyojs) and [Enact](https://github.com/enactjs)
 
-![](https://raw.githubusercontent.com/jaycanuck/github-stats/master/generated/overview.svg#gh-light-mode-only)
-![](https://raw.githubusercontent.com/jaycanuck/github-stats/master/generated/languages.svg#gh-light-mode-only)
+![](https://raw.githubusercontent.com/JayCanuck/github-stats/master/generated/overview.svg#gh-light-mode-only)
+![](https://raw.githubusercontent.com/JayCanuck/github-stats/master/generated/languages.svg#gh-light-mode-only)
 
 ### How to reach me:
 
