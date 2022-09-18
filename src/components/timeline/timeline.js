@@ -21,7 +21,15 @@ const Timeline = ({ className }) => (
                   <br />
                   <small className='timeline__card-title--small'>({job.duration || 'present'})</small>
                 </h2>
-                <p dangerouslySetInnerHTML={{ __html: job.description.replace(/\n/g, '<br />') }}></p>
+                {!(job?.description || '').includes('\n') ? (
+                  <p className='timeline__card-description' dangerouslySetInnerHTML={{ __html: job.description }} />
+                ) : (
+                  <ul className='timeline__card-description'>
+                    {job.description.split(/[\n\r]+/).map(line => (
+                      <li dangerouslySetInnerHTML={{ __html: line }} />
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           </article>
@@ -131,6 +139,21 @@ const AlternatingTimeline = styled(Timeline)`
   }
   .timeline__card-title--small {
     font-size: 10px;
+  }
+  .timeline__card-description {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .timeline__card-description p {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+  .timeline__card-description li {
+    padding-right: 0.4rem;
+  }
+  .timeline__card-description li:last-child {
+    margin-bottom: 0;
   }
   .timeline__item.is-visible div.inner {
     .timeline__card {
