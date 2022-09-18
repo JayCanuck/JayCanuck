@@ -24,7 +24,6 @@ const loadJSONResume = () => {
 // Takes a JSONResume object and writes it to ./resume.json to be used with PDF export
 // Overrides summary and skills with data from ./data/siteConfig
 const writeJSONResumeForPDF = resume => {
-  resume.basics.summary = siteConfig.authorDescription.replace(/\s*<br\s*[/]?>\s*/g, ' ');
   delete resume.basics.label;
   resume.skills = siteConfig.skills.map(skill => ({ name: skill.name }));
   fs.writeFileSync(path.join(__dirname, '..', 'resume.json'), JSON.stringify(resume, null, '  '));

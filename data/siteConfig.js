@@ -16,7 +16,7 @@ module.exports = {
   twitterUsername: twitter?.username?.toLowerCase(),
   githubUsername: github?.username?.toLowerCase(),
   authorAvatar: '/images/avatar.jpg',
-  authorDescription: `[Coming soon]`,
+  authorDescription: basics?.summary,
   skills: [
     {
       name: 'Multi-platform Webapps',

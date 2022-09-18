@@ -24,7 +24,11 @@ exports.onCreateWebpackConfig = async ({ actions, plugins }) => {
   actions.setWebpackConfig({
     plugins: [
       plugins.define({
-        'process.env.RESUME_BASICS': JSON.stringify({ name: resume?.basics?.name, email: resume?.basics?.email }),
+        'process.env.RESUME_BASICS': JSON.stringify({
+          name: resume?.basics?.name,
+          email: resume?.basics?.email,
+          summary: resume?.basics?.summary
+        }),
         'process.env.RESUME_TWITTER': JSON.stringify(resume?.basics?.profiles?.find(p => p.network === 'Twitter')),
         'process.env.RESUME_LINKEDIN': JSON.stringify(resume?.basics?.profiles?.find(p => p.network === 'LinkedIn')),
         'process.env.RESUME_GITHUB': JSON.stringify({
