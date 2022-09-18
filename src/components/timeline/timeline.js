@@ -17,7 +17,11 @@ const Timeline = ({ className }) => (
               </span>
               <div className='timeline__card'>
                 <h2 className='timeline__card-title'>
-                  {job.company ? `${job.occupation} at ${job.company}` : `${job.occupation}`}
+                  {job.company
+                    ? job.company === 'Independent'
+                      ? `${job.occupation} (Independent)`
+                      : `${job.occupation} at ${job.company}`
+                    : `${job.occupation}`}
                   <br />
                   <small className='timeline__card-title--small'>({job.duration || 'present'})</small>
                 </h2>
@@ -257,6 +261,21 @@ const StackedTimeline = styled(Timeline)`
     width: 10px;
     height: 10px;
     transform: rotate(-45deg);
+  }
+  .timeline__card-description {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem;
+  }
+  .timeline__card-description p {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+  .timeline__card-description li {
+    padding-right: 0.4rem;
+  }
+  .timeline__card-description li:last-child {
+    margin-bottom: 0;
   }
   .timeline__item div.inner p {
     padding: 15px;
