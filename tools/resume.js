@@ -25,6 +25,13 @@ const loadJSONResume = () => {
 // Overrides summary and skills with data from ./data/siteConfig
 const writeJSONResumeForPDF = resume => {
   delete resume.basics.label;
+  resume?.work?.forEach((work, i) => {
+    const prev = resume?.work?.[i - 1];
+
+    if (work && prev && !work.endDate && prev?.name === work?.name) {
+      work.endDate = prev.startDate;
+    }
+  });
   resume.skills = siteConfig.skills.map(skill => ({ name: skill.name }));
   fs.writeFileSync(path.join(__dirname, '..', 'resume.json'), JSON.stringify(resume, null, '  '));
 };
