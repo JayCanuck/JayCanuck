@@ -37,8 +37,16 @@ exports.onCreateWebpackConfig = async ({ actions, plugins }) => {
           url: resume.basics.url
         }),
         'process.env.RESUME_WORK': JSON.stringify(
-          resume.work.map(work => {
+          resume.work.map((work, i) => {
             const startDate = work.startDate.split('-');
+            const prev = resume.work[i - 1];
+            let endDate = work.endDate;
+
+            if (!endDate && prev && prev?.name === work?.name) {
+              // same company, just position change
+              // use position change date as end date
+              endDate = prev.startDate;
+            }
 
             return {
               company: work.name,
@@ -46,14 +54,11 @@ exports.onCreateWebpackConfig = async ({ actions, plugins }) => {
                 month: months[startDate[1]],
                 year: startDate[0]
               },
-              duration: work.endDate
-                ? humanizeDuration(
-                    new Date(`${work.endDate} PST`).getTime() - new Date(`${work.startDate} PST`).getTime(),
-                    {
-                      round: true,
-                      units: ['y', 'mo']
-                    }
-                  )
+              duration: endDate
+                ? humanizeDuration(new Date(`${endDate} PST`).getTime() - new Date(`${work.startDate} PST`).getTime(), {
+                    round: true,
+                    units: ['y', 'mo']
+                  })
                 : null,
               occupation: work.position,
               description: work.summary || ''
