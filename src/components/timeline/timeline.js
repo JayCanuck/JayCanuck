@@ -21,7 +21,7 @@ const Timeline = ({ className }) => (
                     ? job.company === 'Independent'
                       ? `${job.occupation} (Independent)`
                       : `${job.occupation} at ${job.company}`
-                    : `${job.occupation}`}
+                    : `${job.occupation} (Self-Employed)`}
                   <br />
                   <small className='timeline__card-title--small'>({job.duration || 'present'})</small>
                 </h2>
