@@ -101,6 +101,7 @@ const AlternatingTimeline = styled(Timeline)`
   .timeline__card {
     border-radius: 6px;
     border: 1px solid ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.background};
     transform: translate(-50%);
   }
   .timeline__card-title {
