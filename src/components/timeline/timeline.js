@@ -138,6 +138,8 @@ const AlternatingTimeline = styled(Timeline)`
   }
   .timeline__card-title {
     background: ${({ theme }) => theme.colors.primary};
+    border-radius: 6px 6px 0 0;
+    margin: -1px;
   }
   .timeline__card-title:after {
     background: ${({ theme }) => theme.colors.primary};
