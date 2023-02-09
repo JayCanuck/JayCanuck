@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { motion } from 'framer-motion';
-import Konami from 'react-konami-code';
+import { useKonami } from 'react-konami-code';
 import { ResetCSS, GlobalStyle, themes } from '../styles';
 import Header from '../header';
 import Footer from '../footer';
@@ -49,6 +49,8 @@ const easterEgg = () => {
 const Layout = ({ children, location }) => {
   const [theme, setTheme] = useDarkMode();
 
+  useKonami(easterEgg, { code: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13] });
+
   useEffect(() => {
     animateOnScroll();
   }, []);
@@ -58,7 +60,6 @@ const Layout = ({ children, location }) => {
       <ResetCSS />
       <GlobalStyle />
       <StyledContainer>
-        <Konami action={easterEgg} code={[38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]} />
         <Header location={location} onChangeTheme={setTheme} theme={theme} />
         <motion.main key={location} variants={variants} initial='initial' animate='enter'>
           {children}
