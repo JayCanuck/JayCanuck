@@ -27,7 +27,10 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Building JSONResume PDF
-      run: npm run resume
+      run: |
+        node ./tools/resume.js
+        cat resume.json
+        node ./node_modules/.bin/resume export --format pdf --theme @jaycanuck/jsonresume-theme-material static/resume.pdf
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
     - name: Test123
