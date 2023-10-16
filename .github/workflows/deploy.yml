@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: Building JSONResume PDF
       run: |
         node ./tools/resume.js
@@ -45,5 +45,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         cname: jrobitaille.dev
-        publish_dir: ./
+        publish_dir: ./public
         publish_branch: public
