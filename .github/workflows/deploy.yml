@@ -29,14 +29,9 @@ jobs:
     - name: Building JSONResume PDF
       run: |
         node ./tools/resume.js
-        cat resume.json
         node ./node_modules/.bin/resume export --format pdf --theme @jaycanuck/jsonresume-theme-material static/resume.pdf
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
-    - name: Test123
-      run: |
-        ls -al ./static
-        cat ./static/resume.pdf
     - name: Building Gatsby portfolio website
       run: |
         rm -fr ./.cache
@@ -50,5 +45,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         cname: jrobitaille.dev
-        publish_dir: ./public
+        publish_dir: ./
         publish_branch: public
