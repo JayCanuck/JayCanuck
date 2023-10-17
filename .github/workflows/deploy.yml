@@ -25,9 +25,9 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: npm ci
+      run: npm install
     - name: Building JSONResume PDF
-      run: node ./tools/resume.js && ls -la && sleep 15 && ./node_modules/.bin/resume export --format pdf --theme @jaycanuck/jsonresume-theme-material static/resume.pdf && ls -la
+      run: npm run resume
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
     - name: Building Gatsby portfolio website
@@ -37,8 +37,6 @@ jobs:
         npm run build
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
-    - name: Debug
-      run: pwd && ls -la ./public && ls -la . && ls -laR ./static
     - name: Deploying website
       uses: peaceiris/actions-gh-pages@v3
       with:
