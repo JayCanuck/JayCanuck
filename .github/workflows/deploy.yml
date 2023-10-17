@@ -38,7 +38,7 @@ jobs:
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
     - name: Debug
-      run: pwd && ls -la ./public && ls -la .
+      run: pwd && ls -la ./public && ls -la . && ls -laR ./static
     - name: Deploying website
       uses: peaceiris/actions-gh-pages@v3
       with:
