@@ -10,6 +10,7 @@
     "url": "https://github.com/JayCanuck/JayCanuck/issues"
   },
   "scripts": {
+    "postinstall": "patch-package",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -43,7 +44,9 @@
     "gatsby-source-filesystem": "^4.23.0",
     "gatsby-transformer-sharp": "^4.23.0",
     "humanize-duration": "^3.27.3",
+    "patch-package": "^8.0.0",
     "prop-types": "^15.8.1",
+    "puppeteer": "^21.3.8",
     "react": "^18.2.0",
     "react-awesome-styled-grid": "^3.1.4",
     "react-dom": "^18.2.0",
@@ -54,6 +57,11 @@
     "rimraf": "^3.0.2",
     "simple-json-fetch": "^1.0.1",
     "styled-components": "^5.3.5"
+  },
+  "overrides": {
+    "resume-cli": {
+      "puppeteer": "^21.3.8"
+    }
   },
   "devDependencies": {
     "eslint": "^8.23.1",
