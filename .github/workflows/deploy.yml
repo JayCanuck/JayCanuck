@@ -42,5 +42,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         cname: jrobitaille.dev
-        publish_dir: ./
+        publish_dir: ./public
         publish_branch: public
