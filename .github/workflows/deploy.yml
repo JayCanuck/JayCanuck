@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Building JSONResume PDF
-      run: npm run resume
+      run: node ./tools/resume.js && ls -la && ./node_modules/.bin/resume export --format pdf --theme @jaycanuck/jsonresume-theme-material static/resume.pdf && ls -la
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
     - name: Building Gatsby portfolio website
