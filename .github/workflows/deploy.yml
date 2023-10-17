@@ -40,7 +40,13 @@ jobs:
         npm run build
       env:
         JSONRESUME: ${{ secrets.JSONRESUME }}
-
+    - name: Debug
+      run: |
+        ls -la ./static
+        ls -la .
+        ls -la ./public
+      env:
+        JSONRESUME: ${{ secrets.JSONRESUME }}
     - name: Deploying website
       uses: peaceiris/actions-gh-pages@v3
       with:
