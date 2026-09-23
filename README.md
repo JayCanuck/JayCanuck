@@ -2,7 +2,7 @@
 
 I'm Jason Robitaille, a staff-level full-stack web engineer in the SF Bay Area, open to new opportunities.
 
-- 11 years at LG Electronics across five R&D products: the [Enact](https://github.com/enactjs) and [Enyo](https://github.com/enyojs) webOS app frameworks, the [SVL Simulator](https://github.com/lgsvl) cloud platform, and LG.com's 3D e-commerce experience
+- 11 years at LG Electronics across five R&D products: the [Enact](https://github.com/enactjs) and [Enyo](https://github.com/enyojs) webOS app frameworks, the [SVL Simulator](https://github.com/lgsvl) cloud platform, and [RetailVerse](https://www.lg.com/us/press-release/lg-electronics-unveils-retailverse-tranforming-e-commerce-with-immersive-ai-enabled-3d-product-experiences), LG.com's 3D e-commerce experience
 - Created `@enact/cli`, the Enact framework's official CLI, still in production a decade later
 - Long-time webOS homebrew and open-source developer
 
