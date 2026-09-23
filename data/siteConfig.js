@@ -87,7 +87,7 @@ module.exports = {
     },
     {
       label: 'Resume',
-      url: '/resume.pdf'
+      url: '/jason-robitaille-resume.pdf'
     }
   ]
 };

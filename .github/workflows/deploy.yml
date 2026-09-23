@@ -26,10 +26,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-    - name: Building JSONResume PDF
-      run: npm run resume
-      env:
-        JSONRESUME: ${{ secrets.JSONRESUME }}
     - name: Building Gatsby portfolio website
       run: |
         rm -fr ./.cache
