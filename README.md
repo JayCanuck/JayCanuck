@@ -10,8 +10,6 @@ I'm Jason Robitaille, a staff-level full-stack web engineer in the SF Bay Area, 
 
 ![](https://raw.githubusercontent.com/JayCanuck/github-stats/master/generated/overview.svg#gh-dark-mode-only)
 ![](https://raw.githubusercontent.com/JayCanuck/github-stats/master/generated/overview.svg#gh-light-mode-only)
-![](https://raw.githubusercontent.com/JayCanuck/github-stats/master/generated/languages.svg#gh-dark-mode-only)
-![](https://raw.githubusercontent.com/JayCanuck/github-stats/master/generated/languages.svg#gh-light-mode-only)
 
 ### How to reach me:
 
