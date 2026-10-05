@@ -13,4 +13,4 @@ I'm Jason Robitaille, a staff-level full-stack web engineer in the SF Bay Area, 
 
 ### How to reach me:
 
-<a href="mailto:jason.aj.robitaille@gmail.com">![jason.aj.robitaille@gmail.com](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a> <a href="https://www.linkedin.com/in/jaycanuck/">![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
+<a href="mailto:jason.aj.robitaille@gmail.com">![jason.aj.robitaille@gmail.com](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)</a> <a href="https://www.linkedin.com/in/jasonrobitaille/">![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
